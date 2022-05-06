@@ -23,4 +23,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="409dp"
+        android:layout_height="619dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

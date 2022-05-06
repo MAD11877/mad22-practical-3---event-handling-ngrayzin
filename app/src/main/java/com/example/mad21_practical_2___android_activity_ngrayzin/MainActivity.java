@@ -1,5 +1,6 @@
 package com.example.mad21_practical_2___android_activity_ngrayzin;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         button.setText(user.followed ? "UNFOLLOW": "FOLLOW");
         Toast.makeText(this, user.followed ?"Followed" : "Unfollowed", Toast.LENGTH_SHORT).show();
 
+    }
+
+    public void messagefunction(View view)
+    {
+        Intent activityName = new Intent(MainActivity.this,MessageGroup.class);
+        startActivity(activityName);
     }
 
 

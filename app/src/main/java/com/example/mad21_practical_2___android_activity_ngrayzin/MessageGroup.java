@@ -1,8 +1,10 @@
 package com.example.mad21_practical_2___android_activity_ngrayzin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MessageGroup extends AppCompatActivity {
@@ -14,6 +16,23 @@ public class MessageGroup extends AppCompatActivity {
 
         Button group1btn = findViewById(R.id.button3);
         Button group2btn = findViewById(R.id.button4);
+        group1btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment, new Group1());
+                ft.commit();
+            }
+        });
+        group2btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment, new Group2());
+                ft.commit();
+            }
+        });
 
     }
+
 }
